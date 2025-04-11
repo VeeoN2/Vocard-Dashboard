@@ -2,6 +2,8 @@
     <img src="https://img.shields.io/discord/811542332678996008?color=7289DA&label=Support&logo=discord&style=for-the-badge" alt="Discord">
 </a>
 
+# Branch Info
+Added polish language. This branch also contains changes to personalize dashboard to my needs, such as removing unnecessary links, etc. So if you want to use this code be aware of that. Contact me for more info. Verified version 2.0.0
 
 # Vocard Dashboard
 Vocard Dashboard is a web-based user interface that allows users to control the [Vocard music bot](https://github.com/ChocoMeow/Vocard) directly from their browser. With this dashboard, you can easily manage music playback, create playlists, and interact with the bot in a user-friendly way.
