@@ -1128,6 +1128,9 @@ class Player {
         this.send({ op: "repeatTrack" });
     }
 
+    toggleAutoplay() {
+        this.send({ op: "toggleAutoplay", status: !this.autoplay});
+    }
     send(payload) {
         this.socket.send(payload);
     }
@@ -1406,7 +1409,6 @@ class Player {
                     ? "∞"
                     : msToReadableTime(currentTrack.length)
                 : "00:00",
-            "#auto-play": this.autoplay || false,
             "#play-pause-btn":
                 this.isPaused || !currentTrack ? "play_circle" : "pause_circle",
             "#repeat-btn": this.repeat == "track" ? "repeat_one" : "repeat",
@@ -1431,6 +1433,14 @@ class Player {
         this.repeat == "off"
             ? $("#repeat-btn").removeClass("active")
             : $("#repeat-btn").addClass("active");
+
+        if (this.autoplay){
+            $("#autoplay-btn").addClass("filled");
+            $("#autoplay-btn").addClass("active");
+        }else{
+            $("#autoplay-btn").removeClass("filled");
+            $("#autoplay-btn").removeClass("active");
+        }
     }
 
     updateImage(selector, imageUrl) {
