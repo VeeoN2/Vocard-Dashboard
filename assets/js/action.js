@@ -1138,6 +1138,10 @@ $(document).ready(function () {
                     player.seekTo(player.currentPosition + 10000);
                     break;
 
+                case "autoplay":
+                    player.toggleAutoplay();
+                    break;
+
                 case "clear-queue":
                     player.send({ op: "clearQueue", queueType: "queue" });
                     break;
