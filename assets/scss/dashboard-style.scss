@@ -719,9 +719,9 @@ body {
 		overflow: hidden;
 		margin-top: 0.625rem;
 		&:hover {
-			.options {
-				height: 5.625rem;
-			}
+			//.options {
+			//	height: 5.625rem;
+			//}
 			.selected {
 				span {
 					transform: rotate(0deg);
@@ -729,18 +729,18 @@ body {
 			}
 		}
 		.selected {
-			cursor: pointer;
+			//cursor: pointer;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			padding: 0.625rem 0.625rem;
 			border-radius: 0.5rem;
 			border: 0.125rem solid var(--active-bg);
-			span {
-				transform: rotate(180deg);
-				font-size: 1rem;
-				color: var(--sub-text);
-			}
+			//span {
+			//	transform: rotate(180deg);
+			//	font-size: 1rem;
+			//	color: var(--sub-text);
+			//}
 			p {
 				overflow: hidden;
 				white-space: nowrap;
