@@ -225,7 +225,7 @@
         <script type="text/javascript" src="{{ url_for('static', filename='js/action.min.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='js/transformer.min.js') }}"></script>
 
-        <title>Vocard</title>
+        <title>RADIO PUBLIC ++</title>
     </head>
 
     <body>
@@ -413,9 +413,225 @@
                     {% include "footer.html" %}
                 </div>
             </div>
-            {% include "queue.html" %}
-            <div id="queue-overlay" class="mobile-overlay"></div>
-            {% include "controller.html" %}
+            <div class="queue-container">
+                <div class="header">
+                    <h3 class="active">{{ _("Queue") }}</h3>
+                    <div class="actions">
+                        <div class="btn">
+                            <span
+                                class="material-symbols-outlined clickable"
+                                id="toggle-history-list"
+                                >history</span
+                            >
+                            <p class="label">{{ _("Toggle History") }}</p>
+                        </div>
+                        <div class="btn active">
+                            <span
+                                class="material-symbols-outlined clickable"
+                                id="toggle-queue-view2"
+                                >close</span
+                            >
+                            <p class="label">{{ _("Close") }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scrollbar">
+                    <div
+                        class="section"
+                        id="now-playing-section"
+                        style="display: none"
+                    >
+                        <div class="header">
+                            <h4>{{ _("Now playing") }}</h4>
+                        </div>
+                        <div class="track show">
+                            <div class="left">
+                                <div class="thumbnail">
+                                    <img
+                                        class="track-img"
+                                        id="now-playing-img"
+                                        src
+                                        alt
+                                    />
+                                    <img
+                                        class="requester-img"
+                                        id="now-playing-requester-img"
+                                        src
+                                        alt
+                                    />
+                                </div>
+                                <div class="track-info">
+                                    <p class="title" id="now-playing-title"></p>
+                                    <p
+                                        class="description"
+                                        id="now-playing-description"
+                                    ></p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined clickable"
+                                >more_horiz</span
+                            >
+                        </div>
+                    </div>
+                    <div
+                        class="section"
+                        id="play-next-section"
+                        style="display: none"
+                    >
+                        <div class="header">
+                            <h4>{{ _("Next in queue") }}</h4>
+                            <p id="clear-queue-btn">{{ _("Clear queue") }}</p>
+                        </div>
+                        <div class="queue" id="queue"></div>
+                    </div>
+                    <div
+                        class="section"
+                        id="history-section"
+                        style="display: none"
+                    >
+                        <div class="header">
+                            <h4>{{ _("History queue") }}</h4>
+                            <p id="clear-history-queue-btn">
+                                {{ _("Clear history") }}
+                            </p>
+                        </div>
+                        <div class="queue" id="history-queue"></div>
+                    </div>
+                    <div class="action-bar" id="queue-scroll-to-top">
+                        <span class="material-symbols-outlined"
+                            >keyboard_arrow_up</span
+                        >
+                        <p>{{ _("BACK TO TOP") }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="control-container">
+                <div class="left" id="control-info">
+                    <img id="controller-img" src alt />
+                    <div class="track-info">
+                        <p class="title" id="controller-title"></p>
+                        <p class="description" id="controller-description"></p>
+                    </div>
+                    <span
+                        class="material-symbols-outlined clickable"
+                        id="like-btn"
+                        >favorite</span
+                    >
+                </div>
+                <div class="center">
+                    <div class="actions">
+                        <div class="btn">
+                            <span
+                                class="material-symbols-outlined clickable filled"
+                                id="rewind-btn"
+                                >fast_rewind</span
+                            >
+                            <p class="label">{{ _("Rewind 10s") }}</p>
+                        </div>
+                        <div class="btn">
+                            <span
+                                class="material-symbols-outlined clickable"
+                                id="shuffle-btn"
+                                >shuffle</span
+                            >
+                            <p class="label">{{ _("Shuffle") }}</p>
+                        </div>
+                        <div class="btn">
+                            <span
+                                class="material-symbols-outlined clickable filled"
+                                id="back-btn"
+                                >skip_previous</span
+                            >
+                            <p class="label">{{ _("Back") }}</p>
+                        </div>
+                        <div class="btn">
+                            <span
+                                class="material-symbols-outlined clickable play_btn filled"
+                                id="play-pause-btn"
+                                >play_circle</span
+                            >
+                            <p class="label">{{ _("Play") }}</p>
+                        </div>
+                        <div class="btn">
+                            <span
+                                class="material-symbols-outlined clickable filled"
+                                id="skip-btn"
+                                >skip_next</span
+                            >
+                            <p class="label">{{ _("Skip") }}</p>
+                        </div>
+                        <div class="btn">
+                            <span
+                                class="material-symbols-outlined clickable"
+                                id="repeat-btn"
+                                >repeat</span
+                            >
+                            <p class="label">{{ _("Repeat") }}</p>
+                        </div>
+                        <div class="btn">
+                            <span
+                                class="material-symbols-outlined clickable filled"
+                                id="forward-btn"
+                                >fast_forward</span
+                            >
+                            <p class="label">{{ _("Forward 10s") }}</p>
+                        </div>
+                    </div>
+                    <div class="position">
+                        <span id="start-time">00:00</span>
+                        <input
+                            type="range"
+                            class="position-bar"
+                            id="position-bar"
+                            min="1"
+                            max="500"
+                            value="0"
+                        />
+                        <span id="end-time">00:00</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <input
+                        type="range"
+                        class="volume-bar"
+                        id="volume-bar"
+                        min="0"
+                        max="100"
+                        value="0"
+                    />
+                    <div class="btn">
+                        <span class="material-symbols-outlined clickable"
+                            >volume_up</span
+                        >
+                        <p class="label">{{ _("Volume") }}</p>
+                    </div>
+                    <div class="btn">
+                        <span
+                            class="material-symbols-outlined clickable filled"
+                            id="autoplay-btn"
+                            >motion_play</span
+                        >
+                        <p class="label">Autoodtwarzanie</p>
+                    </div>
+                    <div class="btn">
+                        <div id="effect-panel" class="effect-panel"></div>
+                        <span
+                            class="material-symbols-outlined clickable"
+                            id="toggle-effect-panel"
+                            >tune</span
+                        >
+                        <p class="label">{{ _("Effect") }}</p>
+                    </div>
+                    <div class="btn">
+                        <span
+                            class="material-symbols-outlined clickable"
+                            id="toggle-queue-view"
+                            >queue_music</span
+                        >
+                        <p class="label">{{ _("Queue") }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

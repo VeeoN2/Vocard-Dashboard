@@ -1125,6 +1125,9 @@ class Player {
         this.send({ op: "repeatTrack" });
     }
 
+    toggleAutoplay() {
+        this.send({ op: "toggleAutoplay", status: !this.autoplay});
+    }
     send(payload) {
         this.socket.send(payload);
     }
@@ -1427,6 +1430,14 @@ class Player {
         this.repeat == "off"
             ? $("#repeat-btn").removeClass("active")
             : $("#repeat-btn").addClass("active");
+
+        if (this.autoplay){
+            $("#autoplay-btn").addClass("filled");
+            $("#autoplay-btn").addClass("active");
+        }else{
+            $("#autoplay-btn").removeClass("filled");
+            $("#autoplay-btn").removeClass("active");
+        }
     }
 
     updateImage(selector, artworkUrl) {
