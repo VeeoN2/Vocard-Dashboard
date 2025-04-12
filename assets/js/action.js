@@ -1111,6 +1111,10 @@ $(document).ready(function () {
                     player.toggleAutoplay();
                     break;
 
+                case "autoplay":
+                    player.toggleAutoplay();
+                    break;
+
                 case "clear-queue":
                     player.send({ op: "clearQueue", queueType: "queue" })
                     break
