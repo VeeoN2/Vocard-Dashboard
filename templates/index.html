@@ -233,8 +233,163 @@
             <div class="loader"></div>
         </div>
         <div class="main-grid-container">
-            {% include "header.html" %} {% include "menu.html" %}
-            <div id="menu-overlay" class="mobile-overlay"></div>
+            <div class="header-container">
+                <div class="back-page-btn" id="back-page-btn">
+                    <span class="material-symbols-outlined clickable"
+                        >arrow_back</span
+                    >
+                </div>
+                <div class="search-container">
+                    <div class="search-bar">
+                        <span class="material-symbols-outlined">search</span>
+                        <input
+                            type="text"
+                            id="search-query"
+                            placeholder="{{ _('Search your input and add it to the queue') }}"
+                        />
+                        <div
+                            class="loader"
+                            id="search-loader"
+                            style="display: none"
+                        ></div>
+                    </div>
+                    <div class="search-result">
+                        <div class="header">
+                            <h4 id="result-count"></h4>
+                            <div class="btn" id="add-all-tracks-btn">
+                                <span class="material-symbols-outlined"
+                                    >add</span
+                                >
+                                <p>{{ _("Add All") }}</p>
+                            </div>
+                        </div>
+                        <div class="tracks" id="search-result-tracks"></div>
+                    </div>
+                </div>
+
+                <div class="avatar-container" id="channel-members"></div>
+
+                <div class="header-btn">
+                    <div class="btn" id="toggle-inbox-panel">
+                        <span class="material-symbols-outlined filled"
+                            >inbox</span
+                        >
+                        <p class="label">{{ _("Inbox") }}</p>
+                    </div>
+                    <div class="panel" id="inbox-panel">
+                        <div class="header">
+                            <span class="material-symbols-outlined filled"
+                                >inbox</span
+                            >
+                            <h3>{{ _("Inbox") }}</h3>
+                        </div>
+                        <div class="sections">
+                            <div class="no-message">
+                                <img src="/static/img/noMessage.svg" alt />
+                                <p>
+                                    {{ _("No message for you at this time.") }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container">
+                <div id="close-menu">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </div>
+                <div class="scrollbar">
+                    <div class="top">
+                        <div class="user">
+                            <img src="{{ user.avatar.url }}" alt />
+                            <div class="info">
+                                <p class="role">DJ</p>
+                                <p class="username">{{ user.name }}</p>
+                            </div>
+                        </div>
+                        <div class="bot-selection">
+                            <div class="selected">
+                                <div class="left"></div>
+                                <span class="material-symbols-outlined" style="display: none;"
+                                    >keyboard_arrow_down</span
+                                >
+                            </div>
+                            <div class="options"></div>
+                        </div>
+                        <div class="bar"></div>
+                        <div class="section">
+                            <div class="menu-btn active" id="menu-main-page">
+                                <span class="material-symbols-outlined"
+                                    >home</span
+                                >
+                                <p>{{ _("Home") }}</p>
+                            </div>
+
+                            <div class="menu-btn" id="menu-explore-page">
+                                <span class="material-symbols-outlined"
+                                    >explore</span
+                                >
+                                <p>{{ _("Explore") }}</p>
+                            </div>
+
+                            <div class="menu-btn" id="menu-settings-page">
+                                <span class="material-symbols-outlined"
+                                    >dns</span
+                                >
+                                <p>{{ _("Server") }}</p>
+                            </div>
+                        </div>
+                        <div class="bar"></div>
+                        <div class="section">
+                            <div
+                                class="menu-btn center"
+                                id="menu-create-playlist"
+                            >
+                                <span class="material-symbols-outlined"
+                                    >add</span
+                                >
+                                <p class="header-text">
+                                    {{ _("Create Playlist") }}
+                                </p>
+                            </div>
+                            <div id="playlist-selector"></div>
+                        </div>
+                    </div>
+                    <div class="botton">
+                        <div class="section">
+                            <!-- <div class="menu-btn" id="menu-toggle-theme">
+                            <span class="material-symbols-outlined">light_mode</span>
+                            <p>{{ _("Light Mode") }}</p>
+                        </div> -->
+                            <div class="menu-btn" id="menu-user-settings-page">
+                                <span class="material-symbols-outlined"
+                                    >settings</span
+                                >
+                                <p>{{ _("Settings") }}</p>
+                            </div>
+                            <a
+                                href="https://discord.gg/wRCgB7vBQv"
+                                target="_blank"
+                            >
+                                <div class="menu-btn">
+                                    <span class="material-symbols-outlined"
+                                        >help</span
+                                    >
+                                    <p>{{ _("Help") }}</p>
+                                </div>
+                            </a>
+                            <a href="logout">
+                                <div class="menu-btn red">
+                                    <span class="material-symbols-outlined"
+                                        >logout</span
+                                    >
+                                    <p>{{ _("Logout") }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="main-container">
                 <div class="warning-bar">
                     <div class="loader" style="width: 14px"></div>
