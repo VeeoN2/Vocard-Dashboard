@@ -332,6 +332,13 @@
                                 <p>{{ _("Explore") }}</p>
                             </div>
 
+                            <div class="menu-btn" id="menu-explore-pl-page">
+                                <span class="material-symbols-outlined"
+                                    >local_fire_department</span
+                                >
+                                <p>{{ _("Top 50 - Poland") }}</p>
+                            </div>
+
                             <div class="menu-btn" id="menu-settings-page">
                                 <span class="material-symbols-outlined"
                                     >dns</span
@@ -515,7 +522,51 @@
                             {% endfor %}
                         </div>
                     </div>
+                    <div class="section">
+                    <div class="header">
+                        <div class="sub-title">
+                            <p>{{ _("Discover music for every mood") }}</p>
+                            <h2>{{ _("Genres and Moods") }}</h2>
+                        </div>
+                    </div>
+                    <div class="card-container" id="category-playlists">
+                        {% for i in range(10) %}
+                        <div class="card skeleton">
+                            <div class="thumbnail">
+                                <img alt>
+                            </div>
+                            <div class="track-info">
+                                <p class="title"></p>
+                                <p class="description"></p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
                     {% include "footer.html" %}
+                </div>
+                <div class="sections" id="explore-pl-page">
+                    <div class="section">
+                        <div class="header">
+                            <div class="sub-title">
+                                <p>{{ _("Top 50 Polish Hits") }}</p>
+                                <h2>{{ _("Trending Songs") }}</h2>
+                            </div>
+                        </div>
+                        <div class="card-container" id="polish-top-tracks">
+                            {% for i in range(10) %}
+                            <div class="card skeleton">
+                                <div class="thumbnail">
+                                    <img alt />
+                                </div>
+                                <div class="track-info">
+                                    <p class="title"></p>
+                                    <p class="description"></p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
                 <div class="sections" id="user-settings-page">
                     <div class="section">

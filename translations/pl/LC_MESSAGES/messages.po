@@ -636,8 +636,54 @@ msgstr "Usuń utwór"
 msgid "Add to playlist"
 msgstr "Dodaj do playlisty"
 
-#: templates/index.html:241
-msgid "Some errors occurred and the dashboard could not be connected"
+#: templates/index.html:273
+msgid "Search your input and add it to the queue"
+msgstr "Wyszukaj swoją fraze i dodaj ją kolejki"
+
+#: templates/index.html:288
+msgid "Add All"
+msgstr "Dodaj wszysktie"
+
+#: templates/index.html:300 templates/index.html:307
+msgid "Inbox"
+msgstr "Skrzynka odbiorcza"
+
+#: templates/index.html:348
+msgid "Home"
+msgstr "Strona główna"
+
+#: templates/index.html:355
+msgid "Explore"
+msgstr "Odkryj"
+
+#: templates/index.html:360
+msgid "Top 50 - Poland"
+msgstr "Top 50 - Polska"
+
+#: templates/index.html:362
+msgid "Server"
+msgstr "Serwer"
+
+#: templates/index.html:385
+msgid "Light Mode"
+msgstr "Tryb jasny"
+
+#: templates/index.html:391 templates/index.html:632
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: templates/index.html:401
+msgid "Help"
+msgstr "Pomoc"
+
+#: templates/index.html:409
+msgid "Logout"
+msgstr "Wyloguj się"
+
+#: templates/index.html:420
+msgid ""
+"Some errors occurred and the dashboard could not\n"
+"                        be connected"
 msgstr "Wystąpił błąd i panel nie mógł zostać połączony\n"
 
 #: templates/index.html:246
@@ -734,6 +780,14 @@ msgstr "Polecane na dziś"
 #: templates/index.html:345
 msgid "Top 50 Global Hits"
 msgstr "Top 50 światowych hitów"
+
+#: templates/index.html:587
+msgid "Top 50 Polish Hits"
+msgstr "Top 50 polskich hitów"
+
+#: templates/index.html:584
+msgid "Top 50 Polish Hits"
+msgstr "Top 50 polskich hitów"
 
 #: templates/index.html:346
 msgid "Trending Songs"
