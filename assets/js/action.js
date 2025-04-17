@@ -2160,7 +2160,7 @@ $(document).ready(function () {
         if ($("#global-top-tracks").has(".skeleton").length) {
             player.send({
                 op: "getTracks",
-                query: "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF",
+                query: "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=386073fc82f147dc",
                 callback: "global-top-tracks",
             });
         }
