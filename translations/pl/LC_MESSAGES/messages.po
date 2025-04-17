@@ -1,17 +1,19 @@
 # Polish translations for Vocard-Dashboard.
 # Copyright (C) 2025 ORGANIZATION
-# This file is distributed under the same license as the Vocard-Dashboard
-# project.
+# This file is distributed under the same license as the Vocard-Dashboard project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version:  2.0.0\n"
+"Project-Id-Version: 2.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-08-25 16:48+0800\n"
 "PO-Revision-Date: 2025-04-11 22:19+0200\n"
 "Last-Translator: VeeoN2 <media@veeon.pl>\n"
+"Last-Translator: VeeoN2 <media@veeon.pl>\n"
 "Language: pl\n"
+"Language-Team: PL\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Language-Team: PL\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
@@ -306,7 +308,7 @@ msgstr "Nazwa playlisty"
 
 #: templates/index.html:101
 msgid "e.g. My playlist"
-msgstr "Moja playlista"
+msgstr "np. Moja Playlista"
 
 #: templates/index.html:102
 msgid "Playlist type"
@@ -356,7 +358,7 @@ msgstr "Utwórz Playlistę"
 msgid ""
 "Create and personalize your playlist for every mood, crafted exclusively "
 "by you."
-msgstr "Stwórz i spersonalizuj indywidualną playlistę na każdy nastrój."
+msgstr "Utwórz i spersonalizuj własną playlistę dostosowaną do każdego nastroju."
 
 #: templates/index.html:120
 msgid "Rename Playlist"
@@ -380,9 +382,7 @@ msgstr "Umożliwia usuwanie niechcianych kolekcji utworów z biblioteki."
 
 #: templates/index.html:130
 msgid "Adjust the configurations on your server for an optimized experience."
-msgstr ""
-"Dostosuj konfiguracje na swoim serwerze, aby uzyskać zoptymalizowane "
-"działanie."
+msgstr "Dostosuj konfigurację bota na swoim serwerze"
 
 #: templates/index.html:131
 msgid "General"
@@ -444,9 +444,7 @@ msgstr "Język"
 msgid ""
 "You can choose your preferred language, the bot message will change to "
 "the language you set."
-msgstr ""
-"Możesz wybrać preferowany język, wiadomość bota zostanie zmieniona na "
-"ustawiony język."
+msgstr "Zmień preferowany język wiadomości wysyłanych przez bota"
 
 #: templates/index.html:152
 msgid "Queue Mode"
@@ -454,7 +452,7 @@ msgstr "Typ kolejki"
 
 #: templates/index.html:153
 msgid "Change to another type of queue mode."
-msgstr "Zmień na inny typ kolejki"
+msgstr "Zmień typ kolejki na inny"
 
 #: templates/index.html:156
 msgid "DJ Role"
@@ -684,7 +682,7 @@ msgstr "Wyloguj się"
 msgid ""
 "Some errors occurred and the dashboard could not\n"
 "                        be connected"
-msgstr "Wystąpił błąd i panel nie mógł zostać połączony\n"
+msgstr "Wystąpił błąd podczas łączenia z panelem\n"
 
 #: templates/index.html:246
 msgid "Can't Find You on Discord"
@@ -709,14 +707,13 @@ msgstr "Brak historii wyszukiwania"
 
 #: templates/index.html:263
 msgid ""
-"It seems like you haven't searched for any songs yet. No worries, your "
-"musical journey can start right now! Simply enter the\n"
-"                            name of your favorite song or artist in the "
-"search bar."
-msgstr ""
-"Wygląda na to że nie wyszukiwałeś jeszcze żadnych utworów，Zacznij swoją "
-"muzyczną przygodę wpisując nazwę swojej ulubionej piosenki lub artysty w "
-"pasek wyszukiwania."
+"It seems like you haven’t searched for any\n"
+"                            songs yet. No worries, your musical journey "
+"can\n"
+"                            start right now! Simply enter the name of "
+"your\n"
+"                            favorite song or artist in the search bar."
+msgstr "Wygląda na to że nie wyszukiwałeś jeszcze żadnych utworó. Zacznij swoją muzyczną przygodę wpisując nazwę swojej ulubionej piosenki lub artysty w pasku wyszukiwania."
 
 #: templates/index.html:268
 msgid "Search Now"
