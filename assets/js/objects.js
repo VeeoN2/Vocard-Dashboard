@@ -839,21 +839,9 @@ const methods = {
                     <div class="sub-title">
                         <p>${localeTexts.settings.variable.description3}</p>
                         <h2>${localeTexts.settings.variable.header3}</h2>
+                        <p>Samodzielne zapraszanie bota wyłączone - skontaktuj się z @VeeoN_ jeżeli chcesz dodać bota na swój serwer</p>
                     </div>
-                </div>
-                <div class="server-cards">
-                    ${Object.entries(data.inviteGuilds)
-                        .map(
-                            ([serverId, serverData]) => `
-                        <a href="${`https://discord.com/oauth2/authorize?client_id=${player.selectedBot.id}&permissions=2184538176&scope=bot%20applications.commands`}" target="_blank" rel="noopener noreferrer">
-                            ${createServerCard(serverId, serverData, true)}
-                        </a>
-                    `
-                        )
-                        .join("")}
-                </div>
-            </div>`;
-        
+                </div>`
         html += getFooterHtml();
         $settingsPage.html(html);
     },
