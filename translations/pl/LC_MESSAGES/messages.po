@@ -515,6 +515,10 @@ msgstr "Strona główna"
 msgid "Explore"
 msgstr "Odkryj"
 
+#: templates/index.html:360
+msgid "Top 50 - Poland"
+msgstr "Top 50 - Polska"
+
 #: templates/index.html:362
 msgid "Server"
 msgstr "Serwer"
@@ -632,6 +636,10 @@ msgstr "Polecane na dziś"
 #: templates/index.html:583
 msgid "Top 50 Global Hits"
 msgstr "Top 50 światowych hitów"
+
+#: templates/index.html:587
+msgid "Top 50 Polish Hits"
+msgstr "Top 50 polskich hitów"
 
 #: templates/index.html:584
 msgid "Trending Songs"
