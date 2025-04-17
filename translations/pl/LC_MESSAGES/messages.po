@@ -406,7 +406,7 @@ msgstr "Zaproś bota na swój serwer"
 
 #: templates/index.html:136
 msgid "The bot is not currently a member of the following server"
-msgstr "Bot nie jest aktualnie członkiem wybranego serwera."
+msgstr "Bot nie jest aktualnie członkiem poniższych serwerów"
 
 #: templates/index.html:137
 msgid "Careful — you have unsaved changes!"
@@ -614,7 +614,7 @@ msgstr "Przesuń na dół"
 
 #: templates/index.html:212
 msgid "Copy link"
-msgstr "Zkopiuj link"
+msgstr "Skopiuj link"
 
 #: templates/index.html:213
 msgid "Recommendation"
