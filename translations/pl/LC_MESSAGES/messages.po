@@ -707,13 +707,14 @@ msgstr "Brak historii wyszukiwania"
 
 #: templates/index.html:263
 msgid ""
-"It seems like you haven’t searched for any\n"
-"                            songs yet. No worries, your musical journey "
-"can\n"
-"                            start right now! Simply enter the name of "
-"your\n"
-"                            favorite song or artist in the search bar."
-msgstr "Wygląda na to że nie wyszukiwałeś jeszcze żadnych utworó. Zacznij swoją muzyczną przygodę wpisując nazwę swojej ulubionej piosenki lub artysty w pasku wyszukiwania."
+"It seems like you haven't searched for any songs yet. No worries, your "
+"musical journey can start right now! Simply enter the\n"
+"                            name of your favorite song or artist in the "
+"search bar."
+msgstr ""
+"Wygląda na to że nie wyszukiwałeś jeszcze żadnych utworów. Zacznij swoją "
+"muzyczną przygodę wpisując nazwę swojej ulubionej piosenki lub artysty w "
+"pasku wyszukiwania."
 
 #: templates/index.html:268
 msgid "Search Now"
