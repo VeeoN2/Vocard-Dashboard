@@ -172,7 +172,7 @@ function buildPlaylistHtml(dataId, playlist, type) {
         if (decodedTracks.length > 0) {
             let trackImagesHtml = `<div class="image">`;
             decodedTracks.slice(0, 4).forEach((track) => {
-                trackImagesHtml += `<img src="${track.imageUrl}" alt="">`;
+                trackImagesHtml += `<img src="${track.artworkUrl}" alt="">`;
             });
             trackImagesHtml += `</div>`;
             return trackImagesHtml;
@@ -254,7 +254,7 @@ function buildTrackRowHtml(index, track) {
         <div class="left">
             <span>${index}</span>
             <img src="${
-                track.imageUrl
+                track.artworkUrl
             }" onerror="this.src='/static/img/notFound.png'" alt="">
             <div class="track-info">
                 <p class="title">${track.title}</p>
@@ -271,7 +271,7 @@ function buildTrackRowHtml(index, track) {
 function buildTrackCardHtml(track) {
     return `<div class="card" data-id="${track.trackId}" data-type="track">
         <div class="thumbnail">
-            <img src="${track.imageUrl}" onerror="this.src='/static/img/notFound.png'" alt="">
+            <img src="${track.artworkUrl}" onerror="this.src='/static/img/notFound.png'" alt="">
             <span class="material-symbols-outlined filled">play_circle</span>
         </div>
         <div class="track-info">
@@ -298,7 +298,7 @@ function buildQueueTrackHtml(track) {
     return `<div class="track" data-id="${track.trackId}">
         <div class="left">
             <div class="thumbnail">
-                <img class="track-img" src="${track.imageUrl}" onerror="this.src='/static/img/notFound.png'" alt="">
+                <img class="track-img" src="${track.artworkUrl}" onerror="this.src='/static/img/notFound.png'" alt="">
                 <img class="requester-img" src="${track?.requester?.avatarUrl}" alt="">
             </div>
             <div class="track-info">
@@ -794,6 +794,10 @@ $(document).ready(function () {
                     return buildExplorePage();
                 }
 
+                if (pageName == "explore-pl-page") {
+                    return buildExplorePLPage();
+                }
+
                 if (pageName == "create-playlist") {
                     if (player.selectedBot == undefined) {
                         return player.tm.showToast(
@@ -1136,6 +1140,10 @@ $(document).ready(function () {
 
                 case "forward":
                     player.seekTo(player.currentPosition + 10000);
+                    break;
+
+                case "autoplay":
+                    player.toggleAutoplay();
                     break;
 
                 case "clear-queue":
@@ -2065,7 +2073,7 @@ $(document).ready(function () {
                 <div class="track-header">
                     <div class="left">
                         <img src="${
-                            decodedTrack.imageUrl
+                            decodedTrack.artworkUrl
                         }" onerror="this.src='/static/img/notFound.png'" alt="">
                         <div class="track-info">
                             <p class="small">${localeTexts.track.track}</p>
@@ -2165,5 +2173,15 @@ $(document).ready(function () {
             });
         }
         changePage("explore-page", true, false);
+    }
+    function buildExplorePLPage() {
+        if ($("#polish-top-tracks").has(".skeleton").length) {
+            player.send({
+                op: "getTracks",
+                query: "https://open.spotify.com/playlist/37i9dQZEVXbN6itCcaL3Tt",
+                callback: "polish-top-tracks",
+            });
+        }
+        changePage("explore-pl-page", true, false);
     }
 });
