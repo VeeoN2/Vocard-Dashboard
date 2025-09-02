@@ -666,7 +666,7 @@ msgid ""
 "                            name of your favorite song or artist in the "
 "search bar."
 msgstr ""
-Wygląda na to że nie wyszukiwałeś jeszcze żadnych utworó. Zacznij swoją "
+"Wygląda na to że nie wyszukiwałeś jeszcze żadnych utworów. Zacznij swoją "
 "muzyczną przygodę wpisując nazwę swojej ulubionej piosenki lub artysty w "
 "pasku wyszukiwania."
 
