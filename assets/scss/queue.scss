@@ -216,18 +216,18 @@
         transition: all ease-in-out 0.2s;
         overflow: hidden;
         border-radius: 0.5rem;
-        border: 0.125rem solid var(--bg-light);
+        border: 0.125rem solid var(--bg-accent);
         cursor: pointer;
 
         &:hover {
-            background-color: color-mix(in srgb, var(--bg-light) 80%, white);
+            background-color: color-mix(in srgb, var(--bg-accent) 80%, white);
         }
 
         &.active {
-            background-color: var(--bg-light);
+            background-color: var(--bg-accent);
 
             &:hover {
-                background-color: color-mix(in srgb, var(--bg-light) 80%, white);
+                background-color: color-mix(in srgb, var(--bg-accent) 80%, white);
             }
         }
 
