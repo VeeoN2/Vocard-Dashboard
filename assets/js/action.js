@@ -196,9 +196,7 @@ function buildPlaylistHtml(dataId, playlist, type) {
                     <div class="left">
                         ${buildPlaylistImage()}
                         <div class="track-info">
-                            <p class="small ${playlist?.type ? "" : "skeleton"}">${
-        playlist?.type ? capitalize(localeTexts.playlist.type[playlist.type]) : ""
-    }</p>
+                            <p class="small ${playlist?.type ? "" : "skeleton"}">${playlist?.type ? capitalize(localeTexts.playlist.type[playlist.type]) : ""}</p>
                             <h1 class="large ${playlist?.name ? "" : "skeleton"}">${playlist?.name || ""}</h1>
                             <p class="middle ${playlist?.tracks ? "" : "skeleton"}">
                                 ${playlist?.tracks ? `${playlist.tracks.length}&nbsp;Songs • ${msToReadableTime(totalTime)}` : ""}
@@ -335,9 +333,9 @@ function buildSettingPageHtml(guildId, data) {
 
         switch (fieldData.inputType) {
             case "text":
-                sectionHtml = `<input data-id="${key}" class="text-input" type="text" placeholder="${fieldData?.placeholder}" value="${
-                    fieldData.default || ""
-                }" maxlength="${fieldData.maxLength}">`
+                sectionHtml = `<input data-id="${key}" class="text-input" type="text" placeholder="${fieldData?.placeholder}" value="${fieldData.default || ""}" maxlength="${
+                    fieldData.maxLength
+                }">`
                 break
 
             case "dropdown":
@@ -575,6 +573,10 @@ $(document).ready(function () {
     const player = new Player()
 
     $(document).keydown(function (e) {
+        const $target = $(e.target)
+        const isInputField = $target.is("input, textarea") || $target.prop("isContentEditable")
+        if (isInputField) return
+
         const { key, altKey, ctrlKey, metaKey } = e
 
         const keyMap = {
@@ -621,6 +623,7 @@ $(document).ready(function () {
 
         switch (key) {
             case keyMap.playPause:
+                e.preventDefault()
                 player.togglePause()
                 break
             case keyMap.seekForward:
@@ -1025,11 +1028,7 @@ $(document).ready(function () {
 
                 if ($target.is("span")) {
                     if (playlistType == "playlist" || ["link", "share"].includes(player.playlists[options.selectedPlaylistId]?.type)) {
-                        return buildContextMenu(
-                            e,
-                            ["playNow", "playNext", "AddToQueue", "getRecommendation", "getLyrics", "playlistAddTrack", "copyLink"],
-                            options
-                        )
+                        return buildContextMenu(e, ["playNow", "playNext", "AddToQueue", "getRecommendation", "getLyrics", "playlistAddTrack", "copyLink"], options)
                     } else {
                         return buildContextMenu(
                             e,
@@ -1052,7 +1051,6 @@ $(document).ready(function () {
         if ($btn.length) {
             let btnName = $btn.attr("id").replace("-btn", "")
             let currentTrack = player.currentTrack
-            console.log(btnName)
             switch (btnName) {
                 case "menu-bar":
                     let $menuContainer = $(".menu-container")
@@ -1167,11 +1165,7 @@ $(document).ready(function () {
                         selectedTrackIndex: $track.index("#queue .track") + 1,
                     }
                     if ($target.is("span")) {
-                        return buildContextMenu(
-                            e,
-                            ["skipTo", "moveTop", "moveEnd", "removeTrack", "getRecommendation", "getLyrics", "playlistAddTrack", "copyLink"],
-                            options
-                        )
+                        return buildContextMenu(e, ["skipTo", "moveTop", "moveEnd", "removeTrack", "getRecommendation", "getLyrics", "playlistAddTrack", "copyLink"], options)
                     }
                     player.skipTo(options.selectedTrackIndex)
                 }
@@ -1697,12 +1691,7 @@ $(document).ready(function () {
             removeTrack: createActionElement("do_not_disturb_on", localeTexts.context.removeFromQueue, "context-remove-track", !player.isDJ, true),
             skipTo: createActionElement("skip_next", localeTexts.context.skipTo, "context-skip-to", options.selectedTrackIndex !== 1 || !player.isDJ),
             backTo: createActionElement("skip_previous", localeTexts.context.backTo, "context-back-to", options.selectedTrackIndex !== 1 || !player.isDJ),
-            moveTop: createActionElement(
-                "text_select_move_up",
-                localeTexts.context.moveToTop,
-                "context-move-top",
-                options.selectedTrackIndex === 1 || !player.isDJ
-            ),
+            moveTop: createActionElement("text_select_move_up", localeTexts.context.moveToTop, "context-move-top", options.selectedTrackIndex === 1 || !player.isDJ),
             moveEnd: createActionElement(
                 "text_select_move_down",
                 localeTexts.context.moveToBottom,
