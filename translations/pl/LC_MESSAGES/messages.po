@@ -613,13 +613,10 @@ msgstr "Osiągnięto tymczasowy limit dostępu"
 
 #: templates/index.html:500
 msgid ""
-"It appears you’ve been quite active and have\n"
-"                            reached the limit for requests. Don’t worry, "
-"this is\n"
-"                            only temporary. You’ll be able to continue "
-"your\n"
-"                            activities after a short break."
-msgstr "Wygląda na to, że byłeś dość aktywny i osiągnąłeś limit zapytań. Będziesz mógł kontynuować aktywność po krótkiej przerwie."
+"It appears you've been quite active and have reached the limit for "
+"requests. Don't worry, this is only temporary. You'll be\n"
+"                            able to continue your activities after a "
+"short break."msgstr "Wygląda na to, że byłeś dość aktywny i osiągnąłeś limit zapytań. Będziesz mógł kontynuować aktywność po krótkiej przerwie."
 
 #: templates/index.html:516
 msgid "Recently played"
@@ -641,7 +638,7 @@ msgstr "Top 50 światowych hitów"
 msgid "Top 50 Polish Hits"
 msgstr "Top 50 polskich hitów"
 
-#: templates/index.html:584
+#: templates/index.html:346
 msgid "Trending Songs"
 msgstr "Popularne utwory"
 
