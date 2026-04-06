@@ -833,6 +833,10 @@ $(document).ready(function () {
                     return buildExplorePLPage();
                 }
 
+                if (pageName == "explore-pl-page") {
+                    return buildExplorePLPage()
+                }
+
                 if (pageName == "create-playlist") {
                     if (player.selectedBot == undefined) {
                         return player.tm.showToast("error", localeTexts.errors.noPlayerError)
@@ -1112,8 +1116,8 @@ $(document).ready(function () {
                     break
 
                 case "forward":
-                    player.seekTo(player.currentPosition + 10000)
-                    break
+                    player.seekTo(player.currentPosition + 10000);
+                    break;
 
                 case "autoplay":
                     player.toggleAutoplay();
@@ -1914,7 +1918,7 @@ $(document).ready(function () {
         if ($("#global-top-tracks").has(".skeleton").length) {
             player.send({
                 op: "getTracks",
-                query: "https://music.youtube.com/playlist?list=PL4fGSI1pDJn6puJdseH2Rt9sMvt9E2M4i",
+                query: "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=386073fc82f147dc",
                 callback: "global-top-tracks",
             })
         }
@@ -2003,4 +2007,16 @@ $(document).ready(function () {
             closeAllOverlays()
         }
     })
+
+    // Build Polish Explore Playlist Page
+    function buildExplorePLPage() {
+        if ($("#polish-top-tracks").has(".skeleton").length) {
+            player.send({
+                op: "getTracks",
+                query: "https://open.spotify.com/playlist/37i9dQZEVXbN6itCcaL3Tt",
+                callback: "polish-top-tracks",
+            });
+        }
+        changePage("explore-pl-page", true, false);
+    }
 })
