@@ -829,14 +829,6 @@ $(document).ready(function () {
                     return buildExplorePLPage();
                 }
 
-                if (pageName == "explore-pl-page") {
-                    return buildExplorePLPage();
-                }
-
-                if (pageName == "explore-pl-page") {
-                    return buildExplorePLPage()
-                }
-
                 if (pageName == "create-playlist") {
                     if (player.selectedBot == undefined) {
                         return player.tm.showToast("error", localeTexts.errors.noPlayerError)
@@ -2007,16 +1999,4 @@ $(document).ready(function () {
             closeAllOverlays()
         }
     })
-
-    // Build Polish Explore Playlist Page
-    function buildExplorePLPage() {
-        if ($("#polish-top-tracks").has(".skeleton").length) {
-            player.send({
-                op: "getTracks",
-                query: "https://open.spotify.com/playlist/37i9dQZEVXbN6itCcaL3Tt",
-                callback: "polish-top-tracks",
-            });
-        }
-        changePage("explore-pl-page", true, false);
-    }
 })
