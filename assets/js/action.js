@@ -1918,7 +1918,7 @@ $(document).ready(function () {
         if ($("#global-top-tracks").has(".skeleton").length) {
             player.send({
                 op: "getTracks",
-                query: "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=386073fc82f147dc",
+                query: "https://music.youtube.com/playlist?list=PL4fGSI1pDJn6puJdseH2Rt9sMvt9E2M4i",
                 callback: "global-top-tracks",
             })
         }
@@ -1928,7 +1928,7 @@ $(document).ready(function () {
         if ($("#polish-top-tracks").has(".skeleton").length) {
             player.send({
                 op: "getTracks",
-                query: "https://open.spotify.com/playlist/37i9dQZEVXbN6itCcaL3Tt",
+                query: "https://www.youtube.com/playlist?list=PL4fGSI1pDJn68fmsRw9f6g-NzU5UA45v1",
                 callback: "polish-top-tracks",
             });
         }
