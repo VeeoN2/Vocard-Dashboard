@@ -1928,7 +1928,7 @@ $(document).ready(function () {
         if ($("#polish-top-tracks").has(".skeleton").length) {
             player.send({
                 op: "getTracks",
-                query: "https://www.youtube.com/playlist?list=PL4fGSI1pDJn68fmsRw9f6g-NzU5UA45v1",
+                query: "https://music.youtube.com/playlist?list=PL4fGSI1pDJn68fmsRw9f6g-NzU5UA45v1",
                 callback: "polish-top-tracks",
             });
         }
