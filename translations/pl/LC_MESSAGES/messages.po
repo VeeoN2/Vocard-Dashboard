@@ -21,7 +21,164 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: templates/controller.html:15
+#: templates/index.html:430
+msgid "Can't Find You on Discord"
+msgstr "Nie odnaleziono twojego konta Discord!"
+
+#: templates/index.html:432
+msgid ""
+"I'm unable to locate you in any Discord\n"
+"                            server. Please check that you've invited our "
+"bot and\n"
+"                            granted it the necessary permissions to "
+"access your\n"
+"                            server information."
+msgstr "Nie zostałeś odnaleziony w żadnym serwerze Discord. Upewnij się że zaprosiłeś bota na serwer oraz przydzieliłeś mu wymagane uprawnienia."
+
+#: templates/index.html:440 templates/index.html:508
+msgid "Reload Page"
+msgstr "Przeładuj stronę"
+
+#: templates/index.html:450
+msgid "No Hisotry Searches Found"
+msgstr "Brak historii wyszukiwania"
+
+#: templates/index.html:452
+msgid ""
+"It seems like you haven’t searched for any\n"
+"                            songs yet. No worries, your musical journey "
+"can\n"
+"                            start right now! Simply enter the name of "
+"your\n"
+"                            favorite song or artist in the search bar."
+msgstr "Wygląda na to że nie wyszukiwałeś jeszcze żadnych utworó. Zacznij swoją muzyczną przygodę wpisując nazwę swojej ulubionej piosenki lub artysty w pasku wyszukiwania."
+
+#: templates/index.html:459
+msgid "Search Now"
+msgstr "Szukaj"
+
+#: templates/index.html:468
+msgid "Server Not Detected"
+msgstr "Nie wykryto serwera"
+
+#: templates/index.html:470
+msgid ""
+"Ensure that I’m added to your server. Please\n"
+"                            note, you must possess ‘Manage Guild’ "
+"permissions on\n"
+"                            the server you wish to manage."
+msgstr "Upewnij się, że bot jest dodany do serwera oraz że ma przydzielone uprawnienie ‘Manage Guild’."
+
+#: templates/index.html:476
+msgid "Refresh page"
+msgstr "Odśwież stronę"
+
+#: templates/index.html:485
+msgid "Lyrics Not Found"
+msgstr "Tekst nie został odnaleziony"
+
+#: templates/index.html:487
+msgid ""
+"Sorry, but I’m unable to search for the lyrics\n"
+"                            of this song. Please try searching online."
+msgstr "Niestety, nie mogę odnaleść tekstu tej piosenki. Spróbuj poszukać go online."
+
+#: templates/index.html:498
+msgid "Temporary Access Limit Reached"
+msgstr "Osiągnięto tymczasowy limit dostępu"
+
+#: templates/index.html:500
+msgid ""
+"It appears you've been quite active and have reached the limit for "
+"requests. Don't worry, this is only temporary. You'll be\n"
+"                            able to continue your activities after a "
+"short break."msgstr "Wygląda na to, że byłeś dość aktywny i osiągnąłeś limit zapytań. Będziesz mógł kontynuować aktywność po krótkiej przerwie."
+
+#: templates/index.html:516
+msgid "Recently played"
+msgstr "Ostatnio odtwarzane"
+
+#: templates/index.html:537
+msgid "Based on your song playback history"
+msgstr "Bazowane na twojej historii odtwarzania"
+
+#: templates/index.html:540
+msgid "Recommendation for today"
+msgstr "Polecane na dziś"
+
+#: templates/index.html:583
+msgid "Top 50 Global Hits"
+msgstr "Top 50 światowych hitów"
+
+#: templates/index.html:587
+msgid "Top 50 Polish Hits"
+msgstr "Top 50 polskich hitów"
+
+#: templates/index.html:346
+msgid "Trending Songs"
+msgstr "Popularne utwory"
+
+#: templates/index.html:604
+msgid "Discover music for every mood"
+msgstr "Odkryj muzykę na dzisiejszy nastrój"
+
+#: templates/index.html:605
+msgid "Genres and Moods"
+msgstr "Gatunki i nastroje"
+
+#: templates/index.html:629
+msgid ""
+"Manage your account settings and\n"
+"                                    preferences"
+msgstr "Zarządzaj swoimi ustawieniami konta oraz preferencjami"
+
+#: templates/index.html:670
+msgid "Dark Mode"
+msgstr "Tryb ciemny"
+
+#: templates/index.html:672
+msgid ""
+"Quickly toggle between light and\n"
+"                                        dark modes for a personalized."
+msgstr "Szybko przełączaj pomiędzy trybem ciemnym a jasnym."
+
+#: templates/index.html:723 templates/index.html:928
+msgid "Queue"
+msgstr "Kolejka"
+
+#: templates/index.html:731
+msgid "Toggle History"
+msgstr "Historia"
+
+#: templates/index.html:739
+msgid "Close"
+msgstr "Zamknij"
+
+#: templates/index.html:750
+msgid "Now playing"
+msgstr "Aktualnie odtwarzane"
+
+#: templates/index.html:787
+msgid "Next in queue"
+msgstr "Następne w kolejce"
+
+#: templates/index.html:788
+msgid "Clear queue"
+msgstr "Wyczyść kolejkę"
+
+#: templates/index.html:798
+msgid "History queue"
+msgstr "Historia kolejki"
+
+#: templates/index.html:800
+msgid "Clear history"
+msgstr "Wyczyść historię"
+
+#: templates/index.html:809
+msgid "BACK TO TOP"
+msgstr "POWRÓT DO GÓRY"
+
+#: templates/index.html:834
 msgid "Rewind 10s"
 msgstr "Cofnij 10s"
 
